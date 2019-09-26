@@ -11,9 +11,10 @@ const valueCashbackIncrease = 0.05;
 const valueCashbackspecial = 0.3;
 
 const cashback = regularPurchases * valueCashbackRegular + increasedPurchases * valueCashbackIncrease + specialPurchases * valueCashbackspecial;
+const maxCashback = 3000;
 let resultCashback = cashback;
-if (cashback > 3000) {
-    resultCashback = 3000;
+if (cashback > maxCashback) {
+    resultCashback = maxCashback;
 }
 console.log ('Сумма покупки составила ' + purchaseAmount + ' руб.' )
 console.log ('Кэшбэк составляет ' + resultCashback + ' руб.');
